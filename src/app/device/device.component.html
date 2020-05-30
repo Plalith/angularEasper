@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-12">
+        <h3>All Device ({{data.count}})</h3>
+        <ul class="looped">
+            <li *ngFor='let i of data.results'>
+                <div class="listItem">
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <div class="image">
+                                <img src="https://zctse.esper.cloud/static/media/phone.1976b651.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="name">
+                                {{i.device_name}}
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="status">
+                                <span>{{i.created_on | date:'medium' }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

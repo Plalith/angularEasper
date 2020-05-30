@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-12">
+        <h3>Device Groups ({{Data.count}})</h3>
+        <ul class="looped">
+            <li *ngFor='let i of Data.results'>
+                <div class="listItem">
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <div class="image">
+                                <img src="https://cdn4.iconfinder.com/data/icons/business-463/512/business_corporate_group_office-40-512.png"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="name">
+                                {{i.name}}
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="status">
+                                <span>{{i.created_on | date:'medium' }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
